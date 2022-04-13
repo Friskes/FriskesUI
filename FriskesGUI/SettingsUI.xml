@@ -1,0 +1,1244 @@
+<Ui>
+  <Frame name="SettingsFrame" parent="UIParent" movable="true" enableMouse="true" clampedToScreen="false" frameStrata="DIALOG" hidden="true">
+    <Size x="620" y="705" />
+    <Anchors>
+      <Anchor point="CENTER" />
+    </Anchors>
+    <Backdrop bgFile="Interface\TutorialFrame\TutorialFrameBackground" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+      <EdgeSize>
+        <AbsValue val="20" />
+      </EdgeSize>
+      <BackgroundInsets>
+        <AbsInset left="5" right="5" top="5" bottom="5" />
+      </BackgroundInsets>
+    </Backdrop>
+    <Layers>
+      <Layer level="ARTWORK">
+        <FontString name="$parentHeaderName" inherits="GameFontNormal" font="Fonts\FRIZQT__.TTF" text="|cffc8c7ffF|r|cffafadffr|r|cff9b99ffi|r|cff8c8affs|r|cff7a78ffk|r|cff6966ffe|r|cff5a57ffs|r|cff424cffU|r|cff333dffI|r" outline="normal">
+          <FontHeight val="16" />
+          <Anchors>
+            <Anchor point="TOP">
+              <Offset>
+                <AbsDimension x="0" y="-14" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentVersionNumber" inherits="GameFontNormal" font="Fonts\FRIZQT__.TTF" text="v6.8" outline="normal">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="BOTTOMRIGHT">
+              <Offset>
+                <AbsDimension x="-12" y="14" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton1Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON1_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="45" y="-80" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton2Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON2_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="45" y="-115" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton3Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON3_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="45" y="-45" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton4Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON4_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="45" y="-465" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton5Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON5_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="325" y="-45" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton6Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON6_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="325" y="-80" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton7Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON7_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="325" y="-115" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton8Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON8_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="325" y="-150" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton9Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON9_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="45" y="-185" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentScaleSliderTextMin" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="0.65" outline="outline">
+          <FontHeight val="11" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="165" y="-199" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentScaleSliderTextCurrent" inherits="GameFontNormal" font="Fonts\FRIZQT__.TTF" outline="outline">
+          <FontHeight val="11" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="205" y="-173" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentScaleSliderTextMax" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="1.14" outline="outline">
+          <FontHeight val="11" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="245" y="-199" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton10Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON10_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="60" y="-220" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton11Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON11_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="45" y="-255" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton12Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON12_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="45" y="-290" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton13Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON13_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="325" y="-185" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton14Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON14_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="45" y="-325" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton15Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON15_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="45" y="-360" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton16Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON16_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="45" y="-395" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton17Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON17_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="45" y="-430" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton18Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON18_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="325" y="-220" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton19Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON19_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="325" y="-605" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton20Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON20_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="45" y="-150" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton21Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON21_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="325" y="-290" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton22Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON22_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="325" y="-325" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton23Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON23_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="325" y="-255" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton24Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON24_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="325" y="-395" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton25Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON25_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="325" y="-430" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton26Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON26_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="325" y="-465" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton27Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON27_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="325" y="-500" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton28Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON28_TEXT" outline="outline" hidden="true">          <!--плохо работает, поэтому скрыто-->
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="325" y="-605" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton29Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON29_TEXT" outline="outline">
+          <FontHeight val="9.5" />
+          <Anchors>
+            <Anchor point="BOTTOMLEFT">
+              <Offset>
+                <AbsDimension x="30" y="15" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton30Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON30_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="45" y="-535" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton31Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON31_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="45" y="-500" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton32Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON32_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="45" y="-570" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton33Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON33_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="325" y="-535" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton34Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON34_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="325" y="-570" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton35Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON35_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="45" y="-605" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton36Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON36_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="325" y="-360" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton37Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON37_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="325" y="-640" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentCheckButton38Text" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="FUI_CHECK_BUTTON38_TEXT" outline="outline">
+          <FontHeight val="12" />
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="45" y="-640" />
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+    <Frames>
+      <Button name="$parentCloseButton" inherits="UIPanelCloseButton">
+        <Anchors>
+          <Anchor point="TOPRIGHT">
+            <Offset>
+              <AbsDimension x="-5" y="-5" />
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            CloseFriskesUI()
+          </OnClick>
+        </Scripts>
+      </Button>
+      <Button name="$parentReloadButton" inherits="OptionsButtonTemplate" text="FUI_RELOAD_BUTTON_TEXT">
+        <Size x="95" y="21" />
+        <Anchors>
+          <Anchor point="BOTTOM">
+            <Offset>
+              <AbsDimension x="0" y="15" />
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            ReloadUI()
+          </OnClick>
+        </Scripts>
+      </Button>
+      <Button name="$parentFStackButton" inherits="OptionsButtonTemplate" text="/fs">
+        <Size x="19" y="20" />
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="13" y="-11.5" />
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            UIParentLoadAddOn("Blizzard_DebugTools")
+            FrameStackTooltip_Toggle()
+          </OnClick>
+        </Scripts>
+      </Button>
+      <Button name="$parentETraceButton" inherits="OptionsButtonTemplate" text="/et">
+        <Size x="19" y="20" />
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="40" y="-11.5" />
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            UIParentLoadAddOn("Blizzard_DebugTools")
+            EventTraceFrame:Show()
+            EventTraceFrame_StartEventCapture()
+          </OnClick>
+        </Scripts>
+      </Button>
+      <Button name="$parentNETButton" inherits="OptionsButtonTemplate" text="net">
+        <Size x="19" y="20" />
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="67" y="-11.5" />
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnEnter>
+            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+            GameTooltip:SetText("Use: Shift+Left, Alt+Left, Ctrl+Left.", 1, 0.82, 0, 1, false)
+          </OnEnter>
+          <OnLeave>
+            GameTooltip:SetText("", 1, 0.82, 0, 1, false)
+          </OnLeave>
+          <OnClick>
+            local argument
+            if ( button == "LeftButton" ) then
+                if ( IsShiftKeyDown() ) then
+                    argument = 35
+                elseif ( IsAltKeyDown() ) then
+                    argument = 65
+                elseif ( IsControlKeyDown() ) then
+                    argument = 100
+                else
+                    argument = 1
+                end
+            end
+            FriskesUI_Net_Toggle(argument)
+          </OnClick>
+        </Scripts>
+      </Button>
+      <CheckButton name="$parentCheckButton1" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="20" y="-75"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchTexturesColor1()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentColorSelectButton1" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="210" y="-75"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Layers>
+          <Layer level="OVERLAY">
+            <Texture name="$parentTexture" file="Interface\Buttons\WHITE8X8">
+              <Size>
+                <AbsDimension x="11.5" y="11.5" />
+              </Size>
+              <Anchors>
+                <Anchor point="CENTER" relativeTo="SettingsFrameColorSelectButton1" relativePoint="CENTER">
+                  <Offset>
+                    <AbsDimension x="-0.4" y="0.4" />
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </Texture>
+          </Layer>
+        </Layers>
+        <Scripts>
+          <OnLoad>
+            self:SetHitRectInsets(0, 0, 0, 0)
+          </OnLoad>
+          <OnEnter>
+            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+            GameTooltip:SetText(FUI_COLOR_SELECT_BUTTON1AND2_TEXT_TOOLTIP, 1, 0.82, 0, 1, false)
+          </OnEnter>
+          <OnClick>
+            self:SetChecked(false)
+            FriskesUI.ShowColorPicker(FuiDB.BordersColor.R, FuiDB.BordersColor.G, FuiDB.BordersColor.B, FuiDB.BordersColor.A, FriskesUI.myColorCallback1)
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton2" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="20" y="-110"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchTexturesColor2()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentColorSelectButton2" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="210" y="-110"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Layers>
+          <Layer level="OVERLAY">
+            <Texture name="$parentTexture" file="Interface\Buttons\WHITE8X8">
+              <Size>
+                <AbsDimension x="11.5" y="11.5" />
+              </Size>
+              <Anchors>
+                <Anchor point="CENTER" relativeTo="SettingsFrameColorSelectButton2" relativePoint="CENTER">
+                  <Offset>
+                    <AbsDimension x="-0.4" y="0.4" />
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </Texture>
+          </Layer>
+        </Layers>
+        <Scripts>
+          <OnLoad>
+            self:SetHitRectInsets(0, 0, 0, 0)
+          </OnLoad>
+          <OnEnter>
+            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+            GameTooltip:SetText(FUI_COLOR_SELECT_BUTTON1AND2_TEXT_TOOLTIP, 1, 0.82, 0, 1, false)
+          </OnEnter>
+          <OnClick>
+            self:SetChecked(false)
+            FriskesUI.ShowColorPicker(FuiDB.TexturesColor.R, FuiDB.TexturesColor.G, FuiDB.TexturesColor.B, FuiDB.TexturesColor.A, FriskesUI.myColorCallback2)
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton3" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="20" y="-40"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchHideErrors()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton4" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="20" y="-460"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchRetailTimer()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton5" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="300" y="-40"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnEnter>
+            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+            GameTooltip:SetText(FUI_CHECK_BUTTON5_TEXT_TOOLTIP, 1, 0.82, 0, 1, false)
+          </OnEnter>
+          <OnClick>
+            SwitchChangeSelfName()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <EditBox name="$parentNewNameEditBox" inherits="InputBoxTemplate" letters="12">
+        <Size>
+          <AbsDimension x="121" y="15" />
+        </Size>
+        <Anchors>
+          <Anchor point="CENTER" relativeTo="SettingsFrameCheckButton5">
+            <Offset>
+              <AbsDimension x="210" y="1" />
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>
+            self:SetAutoFocus(false)
+            local NAME = ""
+            self:SetText(NAME)
+          </OnLoad>
+          <OnEnterPressed>
+            EditBox_ClearFocus(self)
+            self.NAME = self:GetText()
+            FuiDB.NewName = self.NAME
+          </OnEnterPressed>
+          <OnEscapePressed>
+            EditBox_ClearFocus(self)
+          </OnEscapePressed>
+        </Scripts>
+      </EditBox>
+      <CheckButton name="$parentCheckButton6" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="300" y="-75"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchClassColorsOnHealthBars()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton7" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="300" y="-110"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchClassIconOnPortraits()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton8" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="300" y="-145"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchCombatIcons()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton9" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="20" y="-180"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchFriskesBar()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <Slider name="$parentScaleSlider" orientation="HORIZONTAL" minValue="0.65" maxValue="1.14" valueStep="0.01" defaultValue="1">
+        <Size>
+          <AbsDimension x="105" y="17" />
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="165" y="-184" />
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Backdrop bgFile="Interface\Buttons\UI-SliderBar-Background" edgeFile="Interface\Buttons\UI-SliderBar-Border" tile="true">
+          <EdgeSize>
+            <AbsValue val="8" />
+          </EdgeSize>
+          <TileSize>
+            <AbsValue val="8" />
+          </TileSize>
+          <BackgroundInsets>
+            <AbsInset left="3" right="3" top="6" bottom="6" />
+          </BackgroundInsets>
+        </Backdrop>
+        <Scripts>
+          <OnValueChanged>
+            FriskesBarUpdateScale(value)
+          </OnValueChanged>
+        </Scripts>
+        <ThumbTexture file="Interface\Buttons\UI-SliderBar-Button-Horizontal">
+          <Size>
+            <AbsDimension x="32" y="32" />
+          </Size>
+        </ThumbTexture>
+      </Slider>
+      <CheckButton name="$parentCheckButton10" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="35" y="-215"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchHideMicroMenuAndBags()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton11" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="20" y="-250"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchHideRightPanels()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton12" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="20" y="-285"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchShowRightPanelsInCombat()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton13" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="300" y="-180"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchDispelBorder()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton14" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="20" y="-320"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchHideBindsAndMacros()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton15" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="20" y="-355"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchSellTrash()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton16" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="20" y="-390"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchRingOfValorTimer()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton17" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="20" y="-425"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnEnter>
+            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+            GameTooltip:SetText(FUI_CHECK_BUTTON17_TEXT_TOOLTIP, 1, 0.82, 0, 1, false)
+          </OnEnter>
+          <OnClick>
+            SwitchTremorTotemTimer()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton18" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="300" y="-215"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchElitePlayerFrame()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton19" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="300" y="-600"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchNamesColor()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton20" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="20" y="-145"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnEnter>
+            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+            GameTooltip:SetText(FUI_CHECK_BUTTON20_TEXT_TOOLTIP, 1, 0.82, 0, 1, false)
+          </OnEnter>
+          <OnClick>
+            SwitchImprovedChat()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton21" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="300" y="-285"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchHideGlowOnPlayerFrame()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton22" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="300" y="-320"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchBlackNameBackground()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton23" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="300" y="-250"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchHidePVPIcon()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton24" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="300" y="-390"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchHideLeaderIcon()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton25" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="300" y="-425"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchHidePVPTimerText()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton26" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="300" y="-460"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchHideHitIndicator()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton27" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="300" y="-495"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchHideGroupIndicator()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton28" inherits="OptionsCheckButtonTemplate" checked="true" hidden="true">        <!--плохо работает, поэтому скрыто-->
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="300" y="-600"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnEnter>
+            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+            GameTooltip:SetText(FUI_CHECK_BUTTON28_TEXT_TOOLTIP, 1, 0.82, 0, 1, false)
+          </OnEnter>
+          <OnClick>
+            SwitchMoveFrames()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton29" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Size x="20" y="20" />
+        <Anchors>
+          <Anchor point="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="10" y="9"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchHideMinimapButton()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton30" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="20" y="-530"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchDalaranArenaEjectTimer()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton31" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="20" y="-495"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchArenaTimeRemainingTimer()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton32" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="20" y="-565"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchTasteForBloodTimer()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton33" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="300" y="-530"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchArenaTrinkets()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton34" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="300" y="-565"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchHideGryphons()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton35" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="20" y="-600"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchScalingAuras()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton36" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="300" y="-355"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchClassColorsOnNameBackground()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton37" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="300" y="-635"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchClassColorOnNames()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentCheckButton38" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="20" y="-635"></AbsDimension>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            SwitchMoveTooltip()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+    </Frames>
+    <Scripts>
+      <OnLoad>
+        self:RegisterForDrag("LeftButton", "RightButton")
+      </OnLoad>
+      <OnDragStart>
+        self:StartMoving()
+      </OnDragStart>
+      <OnDragStop>
+        self:StopMovingOrSizing()
+      </OnDragStop>
+    </Scripts>
+  </Frame>
+</Ui>

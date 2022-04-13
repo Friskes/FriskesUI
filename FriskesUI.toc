@@ -1,0 +1,9 @@
+## Interface: 30300
+## Title: |cffc8c7ffF|r|cffafadffr|r|cff9b99ffi|r|cff8c8affs|r|cff7a78ffk|r|cff6966ffe|r|cff5a57ffs|r|cff424cffU|r|cff333dffI|r
+## Author: Friskes <|cff8A2BE2twitch.tv/friskesx|r>
+## Notes: Improved spell bars, chat and more!
+## Notes-ruRU: Улучшенные панели заклинаний, чат и многое другое!
+## Version: 6.8
+## SavedVariables: FuiDB
+
+LoadAddons.xml

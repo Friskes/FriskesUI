@@ -1,0 +1,49 @@
+<Ui>
+  <Script file="libs\LibStub\LibStub.lua" />
+  <Script file="libs\CallbackHandler-1.0\CallbackHandler-1.0.lua" />
+  <Script file="libs\LibDataBroker-1.1\LibDataBroker-1.1.lua" />
+  <Script file="libs\LibDBIcon-1.0\LibDBIcon-1.0.lua" />
+  <Script file="libs\AceLocale-3.0\AceLocale-3.0.lua" />
+  <Script file="libs\LibBetterBlizzOptions-1.0\LibBetterBlizzOptions-1.0.lua" />
+
+  <Script file="localization\localization.lua" />
+  <Script file="localization\localization.ru.lua" />
+
+  <Script file="FriskesGUI\FriskesUI.lua" />
+
+  <Script file="CollectionAddons\TexturesColor.lua" />
+  <Script file="CollectionAddons\BlackNameBackground.lua" />
+  <Script file="CollectionAddons\HideGlowOnPlayerFrame.lua" />
+  <Script file="CollectionAddons\MoveFrames.lua" />
+  <Script file="CollectionAddons\FriskesBar.lua" />
+  <Script file="CollectionAddons\ImprovedMaps.lua" />
+  <Script file="CollectionAddons\ElitePlayerFrame.lua" />
+  <Script file="CollectionAddons\NamesColor.lua" />
+  <Script file="CollectionAddons\HideBindsAndMacros.lua" />
+  <Script file="CollectionAddons\HideMicroMenuAndBags.lua" />
+  <Script file="CollectionAddons\ShowRightPanelsInCombat.lua" />
+  <Script file="CollectionAddons\HideRightPanels.lua" />
+  <Script file="CollectionAddons\ClassIconOnPortraits.lua" />
+  <Script file="CollectionAddons\DispelBorder.lua" />
+  <Script file="CollectionAddons\CombatIcons.lua" />
+  <Script file="CollectionAddons\SellTrash.lua" />
+  <Script file="CollectionAddons\ArenaTrinkets.lua" />
+  <Script file="CollectionAddons\ClassColorsOnHealthBars.lua" />
+  <Script file="CollectionAddons\ClassColorsOnNameBackground.lua" />
+  <Script file="CollectionAddons\TremorTotemTimer.lua" />
+  <Script file="CollectionAddons\RingOfValorTimer.lua" />
+  <Script file="CollectionAddons\DalaranArenaEjectTimer.lua" />
+  <Script file="CollectionAddons\ArenaTimeRemainingTimer.lua" />
+  <Script file="CollectionAddons\TasteForBloodTimer.lua" />
+  <Script file="CollectionAddons\ChangeSelfName.lua" />
+  <Script file="CollectionAddons\ScalingAuras.lua" />
+  <Script file="CollectionAddons\Net.lua" />
+
+  <Script file="CollectionAddons\RetailTimer\InviteTimer.lua" />
+  <Script file="CollectionAddons\RetailTimer\StartTimer.lua" />
+
+  <Script file="CollectionAddons\ImprovedChat\HideChatButton.lua" />
+  <Script file="CollectionAddons\ImprovedChat\ImprovedChat.lua" />
+
+  <Include file="FriskesGUI\SettingsUI.xml" />
+</Ui>
