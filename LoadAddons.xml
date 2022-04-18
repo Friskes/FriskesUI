@@ -38,6 +38,7 @@
   <Script file="CollectionAddons\ChangeSelfName.lua" />
   <Script file="CollectionAddons\ScalingAuras.lua" />
   <Script file="CollectionAddons\Net.lua" />
+  <Script file="CollectionAddons\KillFPSBlock.lua" />
 
   <Script file="CollectionAddons\RetailTimer\InviteTimer.lua" />
   <Script file="CollectionAddons\RetailTimer\StartTimer.lua" />
