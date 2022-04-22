@@ -165,7 +165,7 @@ local LDBicon = LibStub("LibDBIcon-1.0")
 
 local colorFrame = CreateFrame("frame");
 local colorElapsed = 0;
-local colorDelay = 2.5;
+local colorDelay = 1.5;
 local r1, g1, b1 = 0.8, 0, 1;
 local r2, g2, b2 = random(2)-1, random(2)-1, random(2)-1;
 
@@ -189,22 +189,26 @@ OnClick = function(self, button)
 
     OpenFriskesUI_Toggle()
 end,
-colorFrame:SetScript("OnUpdate", function(self, elaps)
-    colorElapsed = colorElapsed + elaps;
-    if(colorElapsed > colorDelay) then
-      colorElapsed = colorElapsed - colorDelay;
-      r1, g1, b1 = r2, g2, b2;
-      r2, g2, b2 = random(2)-1, random(2)-1, random(2)-1;
-    end
-    Broker_FriskesUI.iconR = r1 + (r2 - r1) * colorElapsed / colorDelay;
-    Broker_FriskesUI.iconG = g1 + (g2 - g1) * colorElapsed / colorDelay;
-    Broker_FriskesUI.iconB = b1 + (b2 - b1) * colorElapsed / colorDelay;
-  end);
-  --colorFrame:SetScript("OnUpdate", nil);
-  iconR = 0.6,
-  iconG = 0,
-  iconB = 1
-})
+OnEnter = function(self)
+    colorFrame:SetScript("OnUpdate", function(self, elaps)
+        colorElapsed = colorElapsed + elaps;
+        if ( colorElapsed > colorDelay ) then
+            colorElapsed = colorElapsed - colorDelay;
+            r1, g1, b1 = r2, g2, b2;
+            r2, g2, b2 = random(2)-1, random(2)-1, random(2)-1;
+        end
+        Broker_FriskesUI.iconR = r1 + (r2 - r1) * colorElapsed / colorDelay;
+        Broker_FriskesUI.iconG = g1 + (g2 - g1) * colorElapsed / colorDelay;
+        Broker_FriskesUI.iconB = b1 + (b2 - b1) * colorElapsed / colorDelay;
+      end);
+end,
+OnLeave = function(self)
+    colorFrame:SetScript("OnUpdate", nil);
+end,
+iconR = 0.6,
+iconG = 0,
+iconB = 1
+});
 
 local function HideMinimapButton()
     FuiDB.minimap.hide = not FuiDB.minimap.hide

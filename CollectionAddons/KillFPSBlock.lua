@@ -24,11 +24,13 @@ local function RUNDOGSHIT(self, event, ...)
         local unit, currentType = ...
         if currentType == "seen" then
             if unit ~= nil then
-                local unitName1 = GetUnitName(unit)
-                local unitName2 = string.gsub(unitName1, "%p", "")
-                local unitName3 = string.gsub(unitName2, "%s", "")
-                if unitName3 == "Влажныйкорм" or unitName3 == "Сухойкорм" then
-                    KillFPSframe:OnUpdate()
+                if GetUnitName(unit) ~= nil then
+                    local unitName1 = GetUnitName(unit)
+                    local unitName2 = string.gsub(unitName1, "%p", "")
+                    local unitName3 = string.gsub(unitName2, "%s", "")
+                    if unitName3 == "Влажныйкорм" or unitName3 == "Сухойкорм" then
+                        KillFPSframe:OnUpdate()
+                    end
                 end
             end
         end
