@@ -33,7 +33,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 --
 
 local DBICON10 = "LibDBIcon-1.0"
-local DBICON10_MINOR = tonumber(("$Rev: 20 $"):match("(%d+)"))
+local DBICON10_MINOR = tonumber(("$Rev: 30 $"):match("(%d+)"))
 if not LibStub then error(DBICON10 .. " requires LibStub.") end
 local ldb = LibStub("LibDataBroker-1.1", true)
 if not ldb then error(DBICON10 .. " requires LibDataBroker-1.1.") end
@@ -64,7 +64,7 @@ function lib:IconCallback(event, name, key, value, dataobj)
 	end
 end
 
-if oldminor and oldminor < 20 then
+if oldminor and oldminor < 30 then
 	if not lib.newCallbackRegistered then
 		ldb.RegisterCallback(lib, "LibDataBroker_AttributeChanged__iconCoords", "IconCallback")
 		ldb.RegisterCallback(lib, "LibDataBroker_AttributeChanged__iconR", "IconCallback")
