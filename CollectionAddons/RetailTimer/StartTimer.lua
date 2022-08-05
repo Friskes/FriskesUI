@@ -31,6 +31,7 @@ Macro for test: /script RunFakeTestTimer:OnEvent("START_TIMER", 1, 15, 60)
 function RunStartTimer()
 -- Таймер до начала сражения
 
+local enableModule_startTimer = true -- вкл/выкл модуль статусбара и больших цифр по центру экрана
 local enableSound = false -- вкл/выкл звук
 
 local ipairs = ipairs
@@ -760,5 +761,8 @@ Timer:RegisterEvent("ZONE_CHANGED_NEW_AREA")
 Timer:RegisterEvent("START_TIMER")
 Timer:RegisterEvent("CHAT_MSG_BG_SYSTEM_NEUTRAL")
 Timer:RegisterEvent("PLAYER_ENTERING_WORLD")
-Timer:SetScript("OnEvent", Timer.OnEvent)
+if enableModule_startTimer then
+    Timer:SetScript("OnEvent", Timer.OnEvent)
+end
+
 end

@@ -3,6 +3,8 @@ local L = LibStub('AceLocale-3.0'):GetLocale('FriskesUI')
 function RunInviteTimer()
 -- Таймер приглашения на арену, поле боя
 
+local enableModule_inviteTimer = true -- вкл/выкл модуль статусбар до блокировки входа на арену
+local enableModule_timeInQueue = true -- вкл/выкл модуль время ожидания в очереди
 local enableSound = true -- вкл/выкл звук
 
 local frame = CreateFrame("Frame", nil, StaticPopup1)
@@ -107,7 +109,9 @@ local function InviteTimer_OnEvent(self, event, ...)
 end
 frame:RegisterEvent("UPDATE_BATTLEFIELD_STATUS")
 frame:RegisterEvent("PLAYER_ENTERING_WORLD")
-frame:SetScript("OnEvent", InviteTimer_OnEvent)
+if enableModule_inviteTimer then
+    frame:SetScript("OnEvent", InviteTimer_OnEvent)
+end
 
 local frame3 = CreateFrame("Frame")
 
@@ -177,7 +181,9 @@ local function TimeInQueue()
 end
 
 function frame4:OnUpdate()
-    TimeInQueue()
+    if enableModule_timeInQueue then
+        TimeInQueue()
+    end
 end
 frame4:SetScript("OnUpdate", frame4.OnUpdate)
 end
