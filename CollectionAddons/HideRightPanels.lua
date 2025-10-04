@@ -1,52 +1,112 @@
 function RunHideRightPanels()
--- Отключение отображения панелей заклинаний справа
-local Core = CreateFrame("Frame");
-Core:RegisterEvent("PLAYER_ENTERING_WORLD");
-Core:SetScript("OnEvent", function(self, event, ...)
-    return self[event](self, ...)
-end);
-local _G = _G;
-function Core:OnLeave()
-    local Update = 1;
-    self:SetScript("OnUpdate", function(self, elapsed)
-        Update = Update - elapsed;
-        MultiBarLeft:SetAlpha(Update * 1.6);
-        MultiBarRight:SetAlpha(Update * 1.6);
-        if Update <= 0 then
-            self:SetScript("OnUpdate", nil);
+  -- Отключение отображения панелей заклинаний справа
+  local Core = CreateFrame("Frame")
+  local bars = { MultiBarRight, MultiBarLeft }
+  local zones, buttons = {}, {}
+
+  local function collectButtons()
+    wipe(buttons)
+    for _, bar in ipairs(bars) do
+      if bar and bar:GetName() then
+        for i = 1, 12 do
+          local b = _G[bar:GetName() .. "Button" .. i]
+          if b then table.insert(buttons, b) end
         end
-    end);
-end
-function Core:OnEnter()
-    self:SetScript("OnUpdate", nil);
-    MultiBarRight:SetAlpha(1);
-    MultiBarLeft:SetAlpha(1);
-end
-function Core:PLAYER_ENTERING_WORLD()
-    self:SetScript("OnUpdate", nil);
-    MultiBarLeft:SetAlpha(0);
-    MultiBarRight:SetAlpha(0);
-end
-local function MBarAlpha(frameName)
-    local frame = _G[frameName];
-    frame:SetAlpha(0);
-    frame:EnableMouse(true);
-    frame:SetScript("OnEnter", function(self)
-        Core:OnEnter();
-    end);
-    frame:SetScript("OnLeave", function(self)
-        Core:OnLeave();
-    end);
-    frame:SetFrameLevel(0);
-    for i = 1, 12 do
-        _G[frameName .. "Button" .. i]:HookScript("OnEnter", function(self)
-            Core:OnEnter();
-        end);
-        _G[frameName .. "Button" .. i]:HookScript("OnLeave", function(self)
-            Core:OnLeave();
-        end);
+      end
     end
-end
-MBarAlpha("MultiBarRight");
-MBarAlpha("MultiBarLeft");
+  end
+
+  local function hideForeignOverlays()
+    local kids = { UIParent:GetChildren() }
+    for _, child in ipairs(kids) do
+      if child:IsShown() then
+        local p = child:GetParent()
+        for _, b in ipairs(buttons) do
+          if p == b then child:Hide() break end
+        end
+      end
+    end
+  end
+
+  local function anyHover()
+    for _, z in ipairs(zones) do if MouseIsOver(z) then return true end end
+    for _, bar in ipairs(bars) do if bar and MouseIsOver(bar) then return true end end
+    for _, b in ipairs(buttons) do if b and MouseIsOver(b) then return true end end
+    return false
+  end
+
+  local function showBars()
+    Core:SetScript("OnUpdate", nil); Core.hiding = nil
+    for _, bar in ipairs(bars) do
+      if bar then
+        bar:SetFrameStrata("MEDIUM")
+        bar:SetFrameLevel(10)
+        bar:Show()
+        bar:SetAlpha(1)
+      end
+    end
+  end
+
+  local function scheduleHide()
+    if Core.hiding then return end
+    Core.hiding = true
+    local t, dur = 1.1, 1.1
+    Core:SetScript("OnUpdate", function(self, elapsed)
+      if anyHover() then
+        for _, bar in ipairs(bars) do if bar then bar:SetAlpha(1) end end
+        self:SetScript("OnUpdate", nil); self.hiding = nil
+        return
+      end
+      t = t - elapsed
+      local a = t > 0 and t / dur or 0
+      for _, bar in ipairs(bars) do if bar then bar:SetAlpha(a) end end
+      if t <= 0 then
+        for _, bar in ipairs(bars) do if bar then bar:Hide() end end
+        hideForeignOverlays()
+        self:SetScript("OnUpdate", nil); self.hiding = nil
+      end
+    end)
+  end
+
+  local function makeHoverZone(anchorTo)
+    if not anchorTo then return end
+    local z = CreateFrame("Frame", nil, UIParent)
+    z:SetPoint("TOPLEFT", anchorTo, -8, 8)
+    z:SetPoint("BOTTOMRIGHT", anchorTo, 8, -8)
+    z:SetFrameStrata("BACKGROUND")   -- ниже баров
+    z:SetFrameLevel(0)
+    z:EnableMouse(true)
+    z:SetScript("OnEnter", showBars)
+    z:SetScript("OnLeave", scheduleHide)
+    table.insert(zones, z)
+  end
+
+  Core:RegisterEvent("PLAYER_ENTERING_WORLD")
+  Core:SetScript("OnEvent", function()
+    collectButtons()
+    for _, bar in ipairs(bars) do
+      if bar then
+        bar:SetFrameStrata("MEDIUM")
+        bar:SetFrameLevel(10)
+        bar:SetAlpha(0)
+        bar:Hide()
+        -- чтобы ховеры кнопок будили бары и давали tooltips/drag
+        for i = 1, 12 do
+          local b = _G[bar:GetName() .. "Button" .. i]
+          if b then
+            b:HookScript("OnEnter", showBars)
+            b:HookScript("OnLeave", scheduleHide)
+          end
+        end
+      end
+      makeHoverZone(bar)
+    end
+  end)
+
+  -- прятать вспышки при нажатиях, если бары скрыты
+  local function stopKeySpark()
+    if bars[1] and not bars[1]:IsShown() then hideForeignOverlays() end
+  end
+  if ActionButtonDown then hooksecurefunc("ActionButtonDown", stopKeySpark) end
+  if MultiActionButtonDown then hooksecurefunc("MultiActionButtonDown", stopKeySpark) end
 end
