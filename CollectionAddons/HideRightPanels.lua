@@ -29,9 +29,16 @@ function RunHideRightPanels()
   end
 
   local function anyHover()
-    for _, z in ipairs(zones) do if MouseIsOver(z) then return true end end
-    for _, bar in ipairs(bars) do if bar and MouseIsOver(bar) then return true end end
-    for _, b in ipairs(buttons) do if b and MouseIsOver(b) then return true end end
+    local f = GetMouseFocus()
+    while f do
+      for _, bar in ipairs(bars) do
+        if f == bar then return true end
+      end
+      for _, b in ipairs(buttons) do
+        if f == b then return true end
+      end
+      f = f:GetParent()
+    end
     return false
   end
 
