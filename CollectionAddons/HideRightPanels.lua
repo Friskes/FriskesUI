@@ -17,12 +17,19 @@ function RunHideRightPanels()
   end
 
   local function hideForeignOverlays()
-    local kids = { UIParent:GetChildren() }
+    local success, kids = pcall(UIParent.GetChildren, UIParent)
+    if not success or not kids then return end
+
     for _, child in ipairs(kids) do
-      if child:IsShown() then
-        local p = child:GetParent()
-        for _, b in ipairs(buttons) do
-          if p == b then child:Hide() break end
+      if child and type(child.IsShown) == "function" and child:IsShown() then
+        local success2, p = pcall(child.GetParent, child)
+        if success2 and p then
+          for _, b in ipairs(buttons) do
+            if p == b then
+              pcall(child.Hide, child)
+              break
+            end
+          end
         end
       end
     end
