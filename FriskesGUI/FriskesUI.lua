@@ -117,7 +117,7 @@ FuiDB = {
         PMF4x = 110,
         PMF4y = 136,
     },
-    ScaleBar = 1.0, -- макс 1.20
+    ScaleBar = 1.0, -- макс 1.24
     NewName = "Friskes",
     BordersColor = {
         R = 0.4,

@@ -3,7 +3,7 @@
 ## Author: Friskes <|cff8A2BE2twitch.tv/friskesx|r>
 ## Notes: Improved spell bars, chat and more!
 ## Notes-ruRU: Улучшенные панели заклинаний, чат и многое другое!
-## Version: 6.8
+## Version: 6.9
 ## SavedVariables: FuiDB
 
 LoadAddons.xml

@@ -129,8 +129,10 @@ function FriskesBar:UpdateUI()
     VehicleMenuBar:SetScale(FuiDB.ScaleBar)
     MultiBarBottomRight:SetScale(FuiDB.ScaleBar)
     MultiBarBottomLeft:SetScale(FuiDB.ScaleBar)
-    MultiBarRight:SetScale(FuiDB.ScaleBar)
-    MultiBarLeft:SetScale(FuiDB.ScaleBar)
+    -- Ограничиваем скейл правых панелей максимум до 1.14
+    local rightPanelsScale = math.min(FuiDB.ScaleBar, 1.14)
+    MultiBarRight:SetScale(rightPanelsScale)
+    MultiBarLeft:SetScale(rightPanelsScale)
     BagPackFrame:SetScale(FuiDB.ScaleBar)
 
     return true

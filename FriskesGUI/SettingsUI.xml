@@ -24,7 +24,7 @@
             </Anchor>
           </Anchors>
         </FontString>
-        <FontString name="$parentVersionNumber" inherits="GameFontNormal" font="Fonts\FRIZQT__.TTF" text="v6.8" outline="normal">
+        <FontString name="$parentVersionNumber" inherits="GameFontNormal" font="Fonts\FRIZQT__.TTF" text="v6.9" outline="normal">
           <FontHeight val="12" />
           <Anchors>
             <Anchor point="BOTTOMRIGHT">
@@ -144,7 +144,7 @@
             </Anchor>
           </Anchors>
         </FontString>
-        <FontString name="$parentScaleSliderTextMax" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="1.20" outline="outline">
+        <FontString name="$parentScaleSliderTextMax" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="1.24" outline="outline">
           <FontHeight val="11" />
           <Anchors>
             <Anchor point="TOPLEFT">
@@ -776,7 +776,7 @@
           </OnClick>
         </Scripts>
       </CheckButton>
-      <Slider name="$parentScaleSlider" orientation="HORIZONTAL" minValue="0.65" maxValue="1.20" valueStep="0.01" defaultValue="1">
+      <Slider name="$parentScaleSlider" orientation="HORIZONTAL" minValue="0.65" maxValue="1.24" valueStep="0.01" defaultValue="1">
         <Size>
           <AbsDimension x="105" y="17" />
         </Size>
